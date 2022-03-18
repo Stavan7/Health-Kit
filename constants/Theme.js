@@ -1,6 +1,4 @@
 const Theme = {
-    white: '#fff',
-    black: '#000',
     headingText: '#205072',
     subHeadingText: '#56C596',
     firstGradient: '#329D9C',
