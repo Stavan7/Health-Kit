@@ -23,8 +23,8 @@ class HomeScreen extends Component {
                     </View>
 
                     <View style={{ marginTop: 20 }}>
-                        <Text style={styles.subText}> {`A health vertical UI kit made with  
-love for Adobe XD`}
+                        <Text style={styles.subText}> A health vertical UI kit made with
+                            {`\n`}love for Adobe XD
                         </Text>
                     </View>
 
