@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
     Image,
     StyleSheet,
@@ -13,7 +13,7 @@ const Header = ({ navigation, BackBtn }) => {
             <View style={styles.bakcBtnContainer}>
                 {
                     BackBtn ?
-                        <TouchableOpacity 
+                        <TouchableOpacity
                             onPress={() => navigation.goBack()}>
                             <Icon name="arrow-back"
                                 size={25}
@@ -23,10 +23,7 @@ const Header = ({ navigation, BackBtn }) => {
                         : null
                 }
             </View>
-            <Image
-                source={require('../assets/header.jpeg')}
-                style={styles.image}
-            />
+            <Image source={require('../assets/icon.png')} style={styles.image} />
         </View>
     )
 }
@@ -34,7 +31,7 @@ const Header = ({ navigation, BackBtn }) => {
 const styles = StyleSheet.create({
     background: {
         backgroundColor: '#fff',
-        padding: 35,
+        padding: 25,
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
@@ -42,9 +39,9 @@ const styles = StyleSheet.create({
     bakcBtnContainer: {
         position: 'absolute',
         left: 14,
-    }, 
+    },
     image: {
-        height: 30
+        height: 50
     }
 })
 

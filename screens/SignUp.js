@@ -12,17 +12,22 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Icon from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient'
 
-class SignIn extends Component {
+class SignUp extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            hidePass: true
+            hidePass: true,
+            hideConfirmPass: true
         }
     }
 
     setHidePass() {
         this.setState({ hidePass: !this.state.hidePass });
+    }
+
+    setHideConfirmPass() {
+        this.setState({ hideConfirmPass: !this.state.hideConfirmPass });
     }
 
     render() {
@@ -31,8 +36,8 @@ class SignIn extends Component {
                 <Header navigation={this.props.navigation} BackBtn />
 
                 <View style={{ marginTop: 30 }}>
-                    <Text style={styles.loginText}>Login</Text>
-                    <Text style={styles.subText}> Enter your login details to{`\n`} access your account
+                    <Text style={styles.loginText}> Register </Text>
+                    <Text style={styles.subText}> Enter required details {`\n`} to create your account
                     </Text>
                 </View>
 
@@ -68,29 +73,36 @@ class SignIn extends Component {
                     </View>
                 </View>
 
-                <TouchableOpacity activeOpacity={0.7} onPress={() => this.props.navigation.navigate('ForgotPassword')}>
-                    <View style={styles.forgotPassword}>
-                        <Text style={styles.forgotPasswordText}>Forgot Password</Text>
+                <View style={[styles.formArea, { marginTop: 20 }]}>
+                    <View style={styles.container}>
+                        <TextInput
+                            style={styles.textInput}
+                            placeholder="Confirm password"
+                            secureTextEntry={this.state.hideConfirmPass ? true : false}
+                        />
+                        <TouchableOpacity
+                            style={styles.icon}
+                            onPress={() => this.setHideConfirmPass(!this.state.hideConfirmPass)}>
+                            <Icon
+                                name={this.state.hideConfirmPass ? 'eye-off' : 'eye'}
+                                size={25}
+                                color={this.state.hideConfirmPass ? '#808080' : '#56C596'}
+                            />
+                        </TouchableOpacity>
                     </View>
-                </TouchableOpacity>
-
+                </View>
 
                 <LinearGradient
                     colors={['#7BE495', '#329D9C']}
                     start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
                     style={styles.navContainer}>
-                    <TouchableOpacity activeOpacity={0.7} onPress={() => this.props.navigation.navigate('Notification')}>
-                        <Text style={styles.navText}>LOGIN</Text>
+                    <TouchableOpacity
+                        activeOpacity={0.7}
+                        onPress={() => this.props.navigation.navigate('Confirmation')}>
+                        <Text style={styles.navText}>REGISTER</Text>
                     </TouchableOpacity>
                 </LinearGradient>
 
-                <View style={styles.signUp}>
-                    <Text style={styles.account}>Don’t have an account ?{' '}</Text>
-                    <TouchableOpacity
-                        onPress={() => this.props.navigation.navigate('SignUp')}>
-                        <Text style={styles.signupBtn}> Sign Up</Text>
-                    </TouchableOpacity>
-                </View>
 
             </SafeAreaView>
         )
@@ -111,8 +123,8 @@ const styles = StyleSheet.create({
     subText: {
         fontFamily: 'Montserrat-Bold',
         color: '#56C596',
-        marginTop: 20,
         fontSize: 17,
+        marginTop: 20,
         textAlign: 'center'
     },
     formArea: {
@@ -145,17 +157,6 @@ const styles = StyleSheet.create({
         color: '#205072',
         fontFamily: 'Montserrat'
     },
-    forgotPassword: {
-        marginTop: 20,
-        width: '80%',
-        alignSelf: 'center',
-        alignItems: 'flex-end'
-    },
-    forgotPasswordText: {
-        fontSize: 16,
-        color: '#56C596',
-        fontFamily: 'Montserrat',
-    },
     navContainer: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -170,21 +171,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'Montserrat-Bold'
     },
-    signUp: {
-        marginVertical: 20,
-        flexDirection: 'row',
-        justifyContent: 'center',
-    },
-    account: {
-        color: '#56C596',
-        fontSize: 16,
-        fontFamily: 'Montserrat',
-    },
-    signupBtn: {
-        color: '#205072',
-        fontSize: 16,
-        fontFamily: 'Montserrat'
-    },
 })
 
-export default SignIn
+export default SignUp

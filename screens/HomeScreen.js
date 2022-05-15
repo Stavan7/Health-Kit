@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import {
     Text,
-    View,
-    Image,
+    View, 
     TouchableOpacity,
     StyleSheet
 } from 'react-native'
+import LottieView from 'lottie-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/header';
 import LinearGradient from 'react-native-linear-gradient'
+
 
 class HomeScreen extends Component {
     render() {
@@ -16,11 +17,8 @@ class HomeScreen extends Component {
             <SafeAreaView style={styles.background}>
                 <Header />
                 <View style={styles.view}>
-
-                    <View style={{ marginTop: 20 }}>
-                        <Text style={styles.headerText}> This is Health UX kit</Text>
-                        <Text style={styles.headerText}> Welcome! </Text>
-                    </View>
+                    <Text style={styles.headerText}> This is Health UX kit</Text>
+                    <Text style={styles.headerText}> Welcome! </Text>
 
                     <View style={{ marginTop: 20 }}>
                         <Text style={styles.subText}> A health vertical UI kit made with
@@ -28,7 +26,12 @@ class HomeScreen extends Component {
                         </Text>
                     </View>
 
-                    <Image source={require('../assets/homeScreen.jpeg')} style={styles.image} />
+                    <LottieView
+                        loop
+                        autoPlay
+                        style={styles.image}
+                        source={require('../assets/lottie.json')}
+                    />
 
                     <LinearGradient
                         colors={['#7BE495', '#329D9C']}
@@ -36,7 +39,7 @@ class HomeScreen extends Component {
                         style={styles.navContainer}>
                         <TouchableOpacity
                             activeOpacity={0.7}
-                            onPress={() => this.props.navigation.navigate('Notification')}
+                            onPress={() => this.props.navigation.navigate('SignUp')}
                         >
                             <Text style={styles.navText}>GET STARTED</Text>
                         </TouchableOpacity>
@@ -71,8 +74,8 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontSize: 25,
-        textAlign: 'center',
         color: '#205072',
+        textAlign: 'center',
         fontFamily: 'Montserrat-Bold',
     },
     subText: {
@@ -82,9 +85,9 @@ const styles = StyleSheet.create({
         fontFamily: 'Montserrat-SemiBold'
     },
     image: {
-        height: '44%',
-        marginTop: 30,
-        marginBottom: 20
+        height: 350,
+        width: '90%',
+        marginVertical: 20,
     },
     navContainer: {
         justifyContent: 'center',
