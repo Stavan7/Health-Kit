@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {
     Text,
-    View, 
+    View,
     TouchableOpacity,
     StyleSheet
 } from 'react-native'
@@ -34,7 +34,7 @@ class HomeScreen extends Component {
                     />
 
                     <LinearGradient
-                        colors={['#7BE495', '#329D9C']}
+                        colors={['#0E8853', '#1B5F75']}
                         start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
                         style={styles.navContainer}>
                         <TouchableOpacity
