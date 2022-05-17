@@ -23,7 +23,7 @@ const Header = ({ navigation, BackBtn }) => {
                         : null
                 }
             </View>
-            <Image source={require('../assets/icon.png')} style={styles.image} />
+            <Image source={require('../assets/Logo.png')} style={styles.image} />
         </View>
     )
 }
@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
         left: 14,
     },
     image: {
-        height: 50
+        height: 55,
+        width: 55
     }
 })
 

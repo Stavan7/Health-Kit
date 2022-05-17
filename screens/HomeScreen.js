@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: '8%',
         width: '80%',
-        borderRadius: 30,
+        borderRadius: 25,
         marginTop: '12%'
     },
     navText: {

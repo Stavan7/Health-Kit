@@ -76,7 +76,7 @@ class SignIn extends Component {
 
 
                 <LinearGradient
-                    colors={['#7BE495', '#329D9C']}
+                     colors={['#0E8853', '#1B5F75']}
                     start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
                     style={styles.navContainer}>
                     <TouchableOpacity activeOpacity={0.7} onPress={() => this.props.navigation.navigate('Notification')}>

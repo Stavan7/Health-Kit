@@ -38,7 +38,7 @@ class ForgotPasswordVerification extends Component {
                 <View style={{ marginTop: 20 }}>
                     <Text style={styles.loginText}> Password Reset </Text>
                     <Text style={styles.subText}>
-                        We've sent the code to {`\n`} kulkarnistavan25@gmail.com
+                        We've sent the code to {`\n`} kulkarni*****.com
                     </Text>
                 </View>
 
@@ -110,7 +110,7 @@ class ForgotPasswordVerification extends Component {
                 </View>
 
                 <LinearGradient
-                    colors={['#7BE495', '#329D9C']}
+                     colors={['#0E8853', '#1B5F75']}
                     start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
                     style={styles.navContainer}>
                     <TouchableOpacity
