@@ -51,7 +51,18 @@ class SignUp extends Component {
                         />
                         <AntDesign name="checkcircle" size={25} color="#56C596" />
                     </View>
+                </View>
 
+                <View style={[styles.formArea, { marginTop: 20 }]}>
+                    <View style={styles.container}>
+                        <TextInput
+                            style={styles.textInput}
+                            placeholder="Name"
+                            autoCapitalize="none"
+                            keyboardType="email-address"
+                        />
+                        <Icon name="user" size={25} color="#808080" />
+                    </View>
                 </View>
 
                 <View style={[styles.formArea, { marginTop: 20 }]}>
@@ -93,7 +104,7 @@ class SignUp extends Component {
                 </View>
 
                 <LinearGradient
-                     colors={['#0E8853', '#1B5F75']}
+                    colors={['#0E8853', '#1B5F75']}
                     start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
                     style={styles.navContainer}>
                     <TouchableOpacity
@@ -142,7 +153,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 25,
         paddingHorizontal: 25,
-        shadowColor: "#000",
+        shadowColor: "#161616",
         shadowOffset: {
             width: 0,
             height: 8,

@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-healthkit-staging-90732-authRole",
+      "UnauthRoleArn": "arn:aws:iam::097150327940:role/amplify-healthkit-staging-90732-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::097150327940:role/amplify-healthkit-staging-90732-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-healthkit-staging-90732-deployment",
+      "UnauthRoleName": "amplify-healthkit-staging-90732-unauthRole",
+      "StackName": "amplify-healthkit-staging-90732",
+      "StackId": "arn:aws:cloudformation:us-east-1:097150327940:stack/amplify-healthkit-staging-90732/5bf881a0-1f9e-11ed-be83-0ab60a03f8e3",
+      "AmplifyAppId": "djy5b1qd47k72"
+    },
+    "categories": {
+      "auth": {
+        "HealthKit": {}
+      }
+    }
+  }
+}
