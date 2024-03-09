@@ -14,7 +14,7 @@ class Routing extends Component {
     render() {
         return (
             <NavigationContainer>
-                <Stack.Navigator>
+                <Stack.Navigator initialRouteName='HomeScreen'>
                     <Stack.Screen
                         name="HomeScreen"
                         component={HomeScreen}
